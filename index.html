@@ -1,135 +1,54 @@
- <!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stop Kekerasan Seksual</title>
+    <title>Teks Berjalan dengan Background Keren</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8, #845ef7, #5c7cfa, #339af0, #22b8cf, #20c997, #51cf66, #94d82d, #fcc419, #ff922b);
+            background-size: 300% 300%;
+            animation: gradient 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
         }
-        header {
-            background-color: #ff4b5c;
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .marquee {
+            font-size: 24px;
             color: white;
-            padding: 1rem;
-            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
-        main {
-            padding: 2rem;
+
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 10s linear infinite;
         }
-        .report-button {
-            display: block;
-            width: 100%;
-            max-width: 300px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background-color: #ff4b5c;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-        }
-        .resources, .report-form {
-            margin-top: 2rem;
-        }
-        .resources h2, .report-form h2 {
-            color: #333;
-        }
-        .resources ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .resources li {
-            background-color: white;
-            margin: 0.5rem 0;
-            padding: 1rem;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .report-form input, .report-form textarea {
-            width: 100%;
-            padding: 0.5rem;
-            margin: 0.5rem 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .report-form button {
-            background-color: #ff4b5c;
-            color: white;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Stop Kekerasan Seksual</h1>
-    </header>
-    <main>
-        <p>Kekerasan seksual adalah masalah serius yang harus dihentikan. Jika Anda atau seseorang yang Anda kenal menjadi korban, jangan ragu untuk melaporkannya.</p>
-        <a href="#report-form" class="report-button">Laporkan Kekerasan</a>
-        <div class="resources">
-            <h2>Sumber Daya Penting</h2>
-            <ul>
-                <li><a href="https://wa.me/081617342139">Layanan Konseling</a></li>
-                <li><a href="https://example.com">Pusat Krisis</a></li>
-                <li><a href="https://www.instagram.com/cefo_in?igsh=MXd2M2RtdHJjMTFmNg==">Informasi Hukum</a></li>
-            </ul>
-        </div>
-        <div class="report-form" id="report-form">
-            <h2>Formulir Pelaporan Kekerasan</h2>
-            <form action="submit_report.php" method="post">
-                <label for="name">Nama:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="incident">Deskripsi Kejadian:</label>
-                <textarea id="incident" name="incident" rows="5" required></textarea>
-                <button type="submit">Kirim Laporan</button>
-            </form>
-        </div>
-    </main>
-    <footer>
-        <p>© 2024 Stop Kekerasan Seksual. Semua Hak Dilindungi.</p>
-    </footer>
+    <div class="marquee">
+        <span>P MC DEKKKK!</span>
+    </div>
 </body>
-</html>
-[03.08, 3/10/2024] Ricky: < IDOCTYPE html>
-<html lang-"en"›
-<head>
-‹meta charset="UTF-8" /›
-‹meta http-equiv="X-UA-Compatible" content="IE=edge" /›
-‹meta name="viewport" content="width=device-width, initial-scale=1.0" < title>Document</title>
-8
-<link rel-"stylesheet" href-"style.css" /›
-</head> < body>
-< div class="container"›
-< span›</span>
-‹span>E</span>
-< span>&nbsp</ span>
-‹span>A</span> < span>N</span> < span>D</span>
-< span>&nbsp</span>
-< span>y</span> < span>o</ span> < span>u</span>
-22
-23
-24
-< span>&nbsp</span>
-< span></ span>
-</ div>
-</ body>
 </html>
