@@ -1,0 +1,74 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    height: 100vh; /* Mengatur tinggi layar */
+    overflow: hidden; /* Menghindari scroll */
+    background: linear-gradient(to right, #4CAF50, #FFC107); /* Gradien hijau ke kuning */
+    color: white; /* Warna teks putih */
+}
+
+header {
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    position: relative; /* Agar bagian ini bisa di atas background */
+    z-index: 1; /* Pastikan isi bisa terlihat di atas background */
+    background: rgba(0, 0, 0, 0.5); /* Latar belakang transparan untuk bagian isi */
+    margin: 20px; /* Margin untuk memberi jarak antar bagian */
+    border-radius: 8px; /* Membulatkan sudut */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: rgba(0, 0, 0, 0.7); /* Latar belakang transparan untuk footer */
+    color: white;
+    position: relative;
+    z-index: 1; /* Pastikan footer di atas background */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #4CAF50; /* Warna tombol hijau */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px; /* Membulatkan sudut tombol */
+}
