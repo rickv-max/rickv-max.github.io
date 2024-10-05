@@ -1,12 +1,46 @@
+@font-face {
+    font-family: 'Designer';
+    src: url('Designer.otf') format('truetype');
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    height: 100vh; /* Mengatur tinggi layar */
-    overflow: hidden; /* Menghindari scroll */
-    background: linear-gradient(to right, #4CAF50, #FFC107); /* Gradien hijau ke kuning */
     color: white; /* Warna teks putih */
+    animation: gradient 15s ease infinite; /* Menambahkan animasi */
+    background: linear-gradient(270deg, #4CAF50, #FFC107); /* Warna awal */
+    background-size: 400% 400%; /* Membuat ukuran latar belakang lebih besar */
+}
+
+h1 {
+    font-family: 'Designer', sans-serif; /* Menggunakan font Designer */
+    font-size: 3rem; /* Ukuran font yang lebih besar */
+    text-align: center;
+    margin-bottom: 20px; /* Jarak bawah */
+    transform: translateY(-50px); /* Posisi awal */
+    opacity: 0; /* Transparansi awal */
+    transition: all 0.5s ease; /* Transisi halus */
+}
+
+h1.visible {
+    transform: translateY(0); /* Posisi akhir */
+    opacity: 1; /* Transparansi penuh */
+}
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%; /* Posisi awal */
+    }
+    50% {
+        background-position: 100% 50%; /* Posisi tengah */
+    }
+    100% {
+        background-position: 0% 50%; /* Kembali ke posisi awal */
+    }
 }
 
 header {
@@ -30,7 +64,7 @@ nav a {
 }
 
 section {
-    padding: 20px;
+    padding: 40px 20px; /* Penambahan padding untuk memberi ruang */
     position: relative; /* Agar bagian ini bisa di atas background */
     z-index: 1; /* Pastikan isi bisa terlihat di atas background */
     background: rgba(0, 0, 0, 0.5); /* Latar belakang transparan untuk bagian isi */
@@ -47,28 +81,53 @@ footer {
     z-index: 1; /* Pastikan footer di atas background */
 }
 
-form {
+/* Gaya untuk galeri gambar */
+.gallery {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around; /* Menjaga jarak antar gambar */
+    flex-wrap: wrap; /* Membiarkan gambar pindah ke baris baru jika tidak muat */
+    margin-top: 30px; /* Jarak atas */
 }
 
-form label {
-    margin-top: 10px;
+.gallery-image {
+    width: 40%; /* Atur lebar gambar */
+    opacity: 0; /* Transparansi awal */
+    transform: translateX(-50px); /* Posisi awal (geser dari kiri) */
+    transition: all 0.5s ease; /* Transisi halus */
 }
 
-form input, form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: none;
-    border-radius: 4px;
+.gallery-image.visible {
+    opacity: 1; /* Transparansi penuh */
+    transform: translateX(0); /* Kembali ke posisi normal */
 }
 
-form button {
-    margin-top: 10px;
-    padding: 10px;
-    background: #4CAF50; /* Warna tombol hijau */
+
+/* Gaya untuk modal */
+.modal {
+    display: none; /* Modal defaultnya tidak terlihat */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Latar belakang gelap */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
     color: white;
-    border: none;
+    font-size: 40px;
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 4px; /* Membulatkan sudut tombol */
 }

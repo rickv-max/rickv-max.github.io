@@ -1,32 +1,25 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Mencegah reload halaman
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+document.addEventListener("DOMContentLoaded", function() {
+    const h1 = document.querySelector("h1");
+    const images = document.querySelectorAll(".gallery-image");
 
-    // Kirim data ke server
-    fetch('http://localhost:3000/api/contact', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ name, email, message })
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
+    // Fungsi untuk menambah kelas saat scroll
+    function checkScroll() {
+        // Periksa judul
+        const h1Rect = h1.getBoundingClientRect();
+        if (h1Rect.top < window.innerHeight && h1Rect.bottom > 0) {
+            h1.classList.add("visible");
         }
-        return response.json();
-    })
-    .then(data => {
-        // Tampilkan pesan sukses
-        document.getElementById('formMessage').innerText = data.message;
-        // Reset form
-        document.getElementById('contactForm').reset();
-    })
-    .catch(error => {
-        console.error('Terjadi kesalahan:', error);
-        document.getElementById('formMessage').innerText = 'Terjadi kesalahan, silakan coba lagi.';
-    });
+
+        // Periksa gambar
+        images.forEach(image => {
+            const rect = image.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                image.classList.add("visible");
+            }
+        });
+    }
+
+    // Event listener untuk scroll
+    window.addEventListener("scroll", checkScroll);
+    checkScroll(); // Panggil fungsi saat pertama kali memuat
 });
