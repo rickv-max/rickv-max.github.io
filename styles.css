@@ -63,6 +63,41 @@ nav a {
     text-decoration: none;
 }
 
+@media (min-width: 768px) {
+    nav ul li {
+        display: inline-block;
+    }
+
+    main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    section {
+        flex: 1;
+        margin: 0 10px;
+    }
+}
+
+/* Gaya untuk tampilan mobile */
+@media (max-width: 767px) {
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    main {
+        flex-direction: column;
+    }
+}
+
+
+
+
 section {
     padding: 40px 20px; /* Penambahan padding untuk memberi ruang */
     position: relative; /* Agar bagian ini bisa di atas background */
